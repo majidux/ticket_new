@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, ScrollView, StyleSheet, Image, TextInput} from 'react-native';
 import Describe from "./Describe";
+import Upload from "./Upload";
 
 export default class Body extends Component {
     render() {
@@ -11,16 +12,19 @@ export default class Body extends Component {
                         <View style={styles.titleView}>
                             <Text style={{fontSize: 20}}>ثبت تیکت</Text>
                             <View style={{flexDirection: 'row-reverse', paddingVertical: 15}}>
-                                <Image
-                                    source={require('../image/Back_icon.png')}
-                                    style={{paddingRight: 25}}
-                                />
-                                <Text>بازگشت</Text>
+                                <View style={{paddingHorizontal: 10}}>
+                                    <Image
+                                        source={require('../image/Back_icon.png')}
+                                        
+                                    />
+                                </View>
+                                <Text style={{color:'#ff795f'}}>بازگشت</Text>
                             </View>
                         </View>
                         <View style={styles.container2}>
                             <View style={{justifyContent: 'space-between', height: 80}}>
-                                <View style={styles.ticketTitle}><TextInput style={{paddingRight: 20}} placeholder='موضوع تیکت'></TextInput></View>
+                                <View style={styles.ticketTitle}><TextInput style={{paddingRight: 20}}
+                                                                            placeholder='موضوع تیکت'></TextInput></View>
                                 <View style={styles.options}>
                                     <Text style={{color: 'black'}}>اولویت</Text>
                                     <Image
@@ -30,17 +34,15 @@ export default class Body extends Component {
                             </View>
                             
                             <View style={styles.ticketDescription}>
-                                <View><Text style={{color:'black',fontSize:26}}>متن تیکت</Text></View>
+                                <View><Text style={{color: 'black', fontSize: 26}}>متن تیکت</Text></View>
                                 <Describe/>
                             </View>
                             
-                            <View>
-                                <View><Text>آپلود فایل</Text></View>
-                                <View>
-                                
-                                </View>
+                            <View style={styles.ticketDescription}>
+                                <View><Text style={{color: 'black', fontSize: 26}}>آپلود فایل</Text></View>
+                                <Upload/>
                             </View>
-                            
+                        
                         </View>
                     </View>
                 </ScrollView>
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row-reverse',
         paddingHorizontal: 10
     },
-    ticketDescription:{
+    ticketDescription: {
         paddingVertical: 20
     }
     

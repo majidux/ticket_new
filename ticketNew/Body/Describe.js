@@ -83,7 +83,7 @@ export default class Describe extends Component {
                 </View>
                 <View style={styles.bodyWrapper}>
                     <View style={styles.leftText}><View style={styles.scrollButton}></View></View>
-                    <View style={styles.rightText}><Text style={{paddingRight: 20,paddingTop: 15}}>لورم ایپسوم متن ساختگی با تولید نا مفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</Text></View>
+                    <View style={styles.rightText}><Text style={{paddingRight: 20,paddingTop: 15,color:'black'}}>لورم ایپسوم متن ساختگی با تولید نا مفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</Text></View>
                 </View>
                 <View style={styles.footer}>
                     <Text style={styles.headerText}>P</Text>
