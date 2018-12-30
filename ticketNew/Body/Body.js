@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, ScrollView, StyleSheet, Image, TextInput} from 'react-native';
+import Describe from "./Describe";
 
 export default class Body extends Component {
     render() {
@@ -29,10 +30,8 @@ export default class Body extends Component {
                             </View>
                             
                             <View style={styles.ticketDescription}>
-                                <View><Text style={{color:'black',fontSize:30}}>متن تیکت</Text></View>
-                                <View>
-                                    
-                                </View>
+                                <View><Text style={{color:'black',fontSize:26}}>متن تیکت</Text></View>
+                                <Describe/>
                             </View>
                             
                             <View>
@@ -52,10 +51,10 @@ export default class Body extends Component {
 const styles = StyleSheet.create({
     bodyWrapper: {
         flex: 1,
-        // backgroundColor: 'wheat'
+        backgroundColor: 'wheat'
     },
     container: {
-        // backgroundColor: 'red',
+        backgroundColor: 'red',
         margin: 50
     },
     container2: {
@@ -68,7 +67,6 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
     },
     ticketTitle: {
-        // backgroundColor: 'brown',
         borderWidth: 1,
         borderColor: '#e7e7e7',
         height: 40
