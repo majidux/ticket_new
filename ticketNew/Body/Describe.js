@@ -83,7 +83,7 @@ export default class Describe extends Component {
                 </View>
                 <View style={styles.bodyWrapper}>
                     <View style={styles.leftText}><View style={styles.scrollButton}></View></View>
-                    <View style={styles.rightText}><Text style={{paddingRight: 20,paddingTop: 15}}>لورم ایپسوم</Text></View>
+                    <View style={styles.rightText}><Text style={{paddingRight: 20,paddingTop: 15}}>لورم ایپسوم متن ساختگی با تولید نا مفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</Text></View>
                 </View>
                 <View style={styles.footer}>
                     <Text style={styles.headerText}>P</Text>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 3,
         borderBottomWidth: 1,
-        borderBottomColor: '#bec0c2'
+        borderBottomColor: '#ededed'
     },
     bodyWrapper: {
         height: 185,
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 5,
         paddingVertical: 3,
         borderBottomWidth: 1,
-        borderBottomColor: '#bec0c2',
+        borderBottomColor: '#ededed',
         justifyContent: 'space-between',
         alignItems: 'flex-end'
     },
