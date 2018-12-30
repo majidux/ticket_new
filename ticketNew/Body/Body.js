@@ -51,10 +51,10 @@ export default class Body extends Component {
 const styles = StyleSheet.create({
     bodyWrapper: {
         flex: 1,
-        backgroundColor: 'wheat'
+        // backgroundColor: 'wheat'
     },
     container: {
-        backgroundColor: 'red',
+        // backgroundColor: 'red',
         margin: 50
     },
     container2: {

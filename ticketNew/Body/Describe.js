@@ -82,10 +82,15 @@ export default class Describe extends Component {
                     </View>
                 </View>
                 <View style={styles.bodyWrapper}>
-                    <View style={styles.leftText}><Text>sa</Text></View>
+                    <View style={styles.leftText}><View style={styles.scrollButton}></View></View>
                     <View style={styles.rightText}><Text style={{paddingRight: 20,paddingTop: 15}}>لورم ایپسوم</Text></View>
                 </View>
-                <View style={styles.footer}><Text>footer</Text></View>
+                <View style={styles.footer}>
+                    <Text style={styles.headerText}>P</Text>
+                    <Image
+                        source={require('../image/footerIcon.png')}
+                    />
+                </View>
             </View>
         );
     }
@@ -93,12 +98,17 @@ export default class Describe extends Component {
 const styles = StyleSheet.create({
     describeStyle: {
         flex: 1,
-        paddingTop: 10
+        marginTop: 10,
+        borderWidth: .5,
+        borderColor: '#bec0c2',
+        borderRightWidth:1.5,
     },
     header: {
         backgroundColor: '#ffffff',
         flexDirection: 'row',
-        paddingVertical: 13
+        paddingVertical: 13,
+        borderBottomWidth: 1,
+        borderBottomColor: '#bec0c2'
     },
     headerText: {
         color: '#4a4a4a',
@@ -109,14 +119,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         paddingHorizontal: 5,
         paddingVertical: 3,
+        borderBottomWidth: 1,
+        borderBottomColor: '#bec0c2'
     },
     bodyWrapper: {
         height: 185,
-        backgroundColor: 'violet',
         flexDirection:'row'
     },
     footer: {
-        backgroundColor: 'green',
+        backgroundColor: '#e6e6e6',
+        flexDirection: 'row',
+        paddingHorizontal: 5,
+        paddingVertical: 3,
+        borderBottomWidth: 1,
+        borderBottomColor: '#bec0c2',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end'
     },
     buttons: {
         borderWidth: 1,
@@ -131,12 +149,21 @@ const styles = StyleSheet.create({
         
     },
     rightText:{
-        backgroundColor:'blue',
         flex: .99
     },
     leftText:{
-        backgroundColor:'pink',
-        flex:.01
+        backgroundColor:'white',
+        flex:.01,
+        borderRightWidth: 1,
+        borderRightColor: '#bec0c2',
+        padding:3,
+    
+    },
+    scrollButton:{
+        flex:.5,
+        backgroundColor:'#d8d8d8',
+        borderRadius: 10
     }
+    
     
 });
