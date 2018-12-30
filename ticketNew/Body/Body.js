@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, ScrollView, StyleSheet, Image} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, Image, TextInput} from 'react-native';
 
 export default class Body extends Component {
     render() {
@@ -9,7 +9,7 @@ export default class Body extends Component {
                     <View style={styles.container}>
                         <View style={styles.titleView}>
                             <Text style={{fontSize: 20}}>ثبت تیکت</Text>
-                            <View style={{flexDirection: 'row-reverse',paddingVertical: 15}}>
+                            <View style={{flexDirection: 'row-reverse', paddingVertical: 15}}>
                                 <Image
                                     source={require('../image/Back_icon.png')}
                                     style={{paddingRight: 25}}
@@ -17,10 +17,32 @@ export default class Body extends Component {
                                 <Text>بازگشت</Text>
                             </View>
                         </View>
-                    <View style={{flex:1}}>
-                        <View style={styles.ticketTitle}><Text>موضوع تیکت</Text></View>
-                        <View style={styles.options}><Text>اولویت</Text></View>
-                    </View>
+                        <View style={styles.container2}>
+                            <View style={{justifyContent: 'space-between', height: 80}}>
+                                <View style={styles.ticketTitle}><TextInput style={{paddingRight: 20}} placeholder='موضوع تیکت'></TextInput></View>
+                                <View style={styles.options}>
+                                    <Text style={{color: 'black'}}>اولویت</Text>
+                                    <Image
+                                        source={require('../image/down-point.png')}
+                                    />
+                                </View>
+                            </View>
+                            
+                            <View style={styles.ticketDescription}>
+                                <View><Text style={{color:'black',fontSize:30}}>متن تیکت</Text></View>
+                                <View>
+                                    
+                                </View>
+                            </View>
+                            
+                            <View>
+                                <View><Text>آپلود فایل</Text></View>
+                                <View>
+                                
+                                </View>
+                            </View>
+                            
+                        </View>
                     </View>
                 </ScrollView>
             </View>
@@ -30,22 +52,39 @@ export default class Body extends Component {
 const styles = StyleSheet.create({
     bodyWrapper: {
         flex: 1,
-        backgroundColor: 'wheat'
+        // backgroundColor: 'wheat'
     },
     container: {
-        backgroundColor: 'red',
+        // backgroundColor: 'red',
         margin: 50
     },
-    titleView:{
-        borderBottomWidth: 1,
-        borderBottomColor:'#e7e7e7',
+    container2: {
+        marginHorizontal: 50
+        , marginTop: 20
+    },
+    titleView: {
+        borderBottomWidth: 2,
+        borderBottomColor: '#e7e7e7',
         paddingVertical: 15,
     },
-    ticketTitle:{
-        backgroundColor:'brown'
+    ticketTitle: {
+        // backgroundColor: 'brown',
+        borderWidth: 1,
+        borderColor: '#e7e7e7',
+        height: 40
     },
-    options:{
-        backgroundColor:'blue'
+    options: {
+        backgroundColor: '#f3f6fa',
+        width: 150,
+        alignSelf: 'flex-end',
+        height: 30,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row-reverse',
+        paddingHorizontal: 10
+    },
+    ticketDescription:{
+        paddingVertical: 20
     }
     
 });
