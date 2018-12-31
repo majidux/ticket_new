@@ -164,6 +164,5 @@ const styles = StyleSheet.create({
         backgroundColor:'#d8d8d8',
         borderRadius: 10
     }
-    
-    
+        
 });
